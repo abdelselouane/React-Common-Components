@@ -1,0 +1,80 @@
+{
+  "name": "react-common-components",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "babel lib/src -d build --ignore '**/*.spec.js'",
+    "build:watch": "babel lib/src -w -d build --ignore '**/*.spec.js'",
+    "lint": "eslint lib/src/**; exit 0",
+    "package-publish": "npm run build && npm publish",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "e2e": "npm run wdio",
+    "wdio": "wdio"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.css$": "identity-obj-proxy"
+    },
+    "transformIgnorePatterns": [
+      "node_modules"
+    ],
+    "roots": [
+      "lib/src"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>setupTest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.homedepot.com:AXS4JZD/component-lib.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.artifactory.homedepot.com/artifactory/api/npm/npm/"
+  },
+  "author": "axs4jzd <abdeladim_selouane@homedepot.com> (https://www.homedepot.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-transform-arrow-functions": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.4.2",
+    "chromedriver": "^2.41.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "eslint": "^5.5.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-watch": "^4.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "jest-css-modules": "^1.1.0",
+    "json-server": "^0.14.0",
+    "react-test-renderer": "^16.5.2",
+    "wdio-chromedriver-service": "^0.1.2",
+    "wdio-jasmine-framework": "^0.3.2",
+    "wdio-json-reporter": "^0.3.1",
+    "wdio-junit-reporter": "^0.4.4",
+    "wdio-spec-reporter": "^0.1.3",
+    "webdriverio": "^4.10.2",
+    "webpack": "^2.7.0"
+  },
+  "dependencies": {
+    "babel-loader": "^8.0.0",
+    "flexboxgrid": "^6.3.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-router-dom": "^4.3.1"
+  },
+  "gitHead": "3d30cbe53b5fffce947ebd73092980fd9fa2b6b3"
+}
